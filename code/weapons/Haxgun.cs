@@ -1,4 +1,5 @@
-﻿using Sandbox;
+﻿using System;
+using Sandbox;
 
 [Library( "weapon_haxgun", Title = "HaxGun", Spawnable = true )]
 partial class Haxgun : Weapon
@@ -8,6 +9,7 @@ partial class Haxgun : Weapon
 	public override float PrimaryRate => 1.0f;
 	public override float SecondaryRate => 15.0f;
 	public override float ReloadTime => 5.0f;
+	Random rnd = new Random();
 
 	public override void Spawn()
 	{
@@ -28,7 +30,7 @@ partial class Haxgun : Weapon
 		(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
 
 		ShootEffects();
-		PlaySound( "haxgun.shoot" );
+		PlaySound( "haxgun.shoot.attack" + rnd.Next(1, 7));
 
 		if ( Host.IsServer )
 		{
@@ -52,7 +54,7 @@ partial class Haxgun : Weapon
 		(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
 
 		ShootEffects();
-		// PlaySound( "haxgun.shoot" );
+		// PlaySound( "haxgun.shoot.attack" + rnd.Next(1, 7));
 
 		if ( Host.IsServer )
 		{
