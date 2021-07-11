@@ -55,10 +55,84 @@
 						import_filter = 
 						{
 							exclude_by_default = false
-							exception_list = [  ]
+							exception_list = 
+							[
+								"Plane_011",
+								"Plane_007",
+							]
+						}
+					},
+					{
+						_class = "RenderMeshFile"
+						filename = "models/heavybox/rtx.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = 
+							[
+								"Cube_018",
+								"Cylinder_016",
+								"Cylinder_015",
+								"Cylinder_014",
+								"Cylinder_013",
+								"Cylinder_012",
+								"Cylinder_011",
+								"Cube_017",
+								"Cylinder_007",
+								"BezierCurve_001",
+								"Cube_007",
+								"Cylinder_001",
+								"Cube_016",
+								"Cube_015",
+								"Cube_013",
+								"Cube_010",
+								"Cube_012",
+								"Cube_006",
+								"Plane_004",
+								"Cube_003",
+								"Cube_002",
+								"Plane_005",
+								"Plane_009",
+								"Plane_010",
+								"Plane_008",
+							]
 						}
 					},
 				]
+			},
+			{
+				_class = "AnimationList"
+				children = 
+				[
+					{
+						_class = "AnimFile"
+						name = "rtx"
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/heavybox/rtx.fbx"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						reverse = false
+					},
+				]
+				default_root_bone_name = ""
 			},
 		]
 		model_archetype = ""
