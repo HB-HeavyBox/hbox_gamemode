@@ -77,6 +77,8 @@ partial class SandboxPlayer : Player
 
 		Inventory.DropActive();
 		Inventory.DeleteContents();
+
+		PlaySound("player.dead").SetRandomPitch(1f,1.1f);
 	}
 
 	public override void TakeDamage( DamageInfo info )
@@ -96,6 +98,7 @@ partial class SandboxPlayer : Player
 	[ClientRpc]
 	public void TookDamage( DamageFlags damageFlags, Vector3 forcePos, Vector3 force )
 	{
+		PlaySound("player.hit").SetRandomPitch(1f,1.1f);
 	}
 
 	public override PawnController GetActiveController()
