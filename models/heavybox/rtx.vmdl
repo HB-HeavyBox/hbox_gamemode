@@ -114,6 +114,13 @@
 					{
 						_class = "AnimFile"
 						name = "rtx"
+						children = 
+						[
+							{
+								_class = "AnimStartLoop"
+								start_loop_frame = 0
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -128,7 +135,7 @@
 						source_filename = "models/heavybox/rtx.fbx"
 						start_frame = -1
 						end_frame = -1
-						framerate = -1.0
+						framerate = 25.0
 						reverse = false
 					},
 				]
