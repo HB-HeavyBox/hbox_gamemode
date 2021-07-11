@@ -37,7 +37,7 @@ public partial class BalloonEntity : Prop
 	{
 		base.OnKilled();
 
-		PlaySound( "balloon_pop_cute" );
+		PlaySound( "balloon_pop_cute" ).SetRandomPitch(0.9f,1.2f);;
 	}
 
 	[Event.Physics.PostStep]
