@@ -76,7 +76,7 @@ public partial class GravGun : Carriable
 						HeldBody.ApplyAngularImpulse( Vector3.Random * (HeldBody.Mass * ThrowForce) );
 					}
 
-					PlaySound( "gravgun.fire" );
+					PlaySound( "gravgun.fire" ).SetRandomPitch(0.9f,1.2f);
 					GrabSnd.Stop();
 					GrabEnd();
 				}
@@ -109,10 +109,10 @@ public partial class GravGun : Carriable
 			{
 				if ( Input.Pressed( InputButton.Attack1 ) )
 				{
-					PlaySound( "gravgun.empty_fire" );
+					PlaySound( "gravgun.empty_fire" ).SetRandomPitch(0.9f,1.2f);
 				}else if ( Input.Pressed( InputButton.Attack2 ) )
 				{
-					PlaySound( "gravgun.empty_grab_fire" );
+					PlaySound( "gravgun.empty_grab_fire" ).SetRandomPitch(0.9f,1.2f);;
 				}
 			}
 
@@ -134,7 +134,7 @@ public partial class GravGun : Carriable
 				{
 					var pushScale = 1.0f - Math.Clamp( tr.Distance / MaxPushDistance, 0.0f, 1.0f );
 					body.ApplyImpulseAt( tr.EndPos, eyeDir * (body.Mass * (PushForce * pushScale)) );
-					PlaySound( "gravgun.fire" );
+					PlaySound( "gravgun.fire" ).SetRandomPitch(0.9f,1.2f);
 				}
 			}
 			else if ( Input.Down( InputButton.Attack2 ) )
@@ -238,7 +238,7 @@ public partial class GravGun : Carriable
 		if ( IsBodyGrabbed( body ) )
 			return;
 
-		PlaySound( "gravgun.grab_fire" );
+		PlaySound( "gravgun.grab_fire" ).SetRandomPitch(0.9f,1.2f);
 		GrabEnd();
 
 		HeldBody = body;

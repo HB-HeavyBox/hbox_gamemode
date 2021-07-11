@@ -9,6 +9,6 @@ public partial class Tool
 		particle.SetPosition( 0, hitPos );
 		particle.Destroy( false );
 
-		PlaySound( "tool.fire" );
+		PlaySound( "tool.fire" ).SetRandomPitch(0.9f,1.2f);
 	}
 }

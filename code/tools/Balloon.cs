@@ -4,6 +4,7 @@
 	public partial class BalloonTool : BaseTool
 	{
 		[Net]
+		public string Mdl { get; set; }
 		public Color32 Tint { get; set; }
 
 		PreviewEntity previewModel;
@@ -15,6 +16,14 @@
 			if ( Host.IsServer )
 			{
 				Tint = Color.Random.ToColor32();
+				Mdl = Rand.FromArray( new[]
+					{
+						"models/citizen_props/balloontall01.vmdl",
+						"models/citizen_props/balloonregular01.vmdl",
+						"models/citizen_props/balloonheart01.vmdl",
+						"models/citizen_props/balloonears01.vmdl"
+					}
+				);
 			}
 		}
 
@@ -31,7 +40,7 @@
 
 		public override void CreatePreviews()
 		{
-			if ( TryCreatePreview( ref previewModel, "models/citizen_props/balloonregular01.vmdl" ) )
+			if ( TryCreatePreview( ref previewModel, Mdl ) )
 			{
 				previewModel.RelativeToNormal = false;
 			}
@@ -42,6 +51,7 @@
 			if ( previewModel.IsValid() )
 			{
 				previewModel.RenderColor = Tint;
+				previewModel.SetModel(Mdl);
 			}
 
 			if ( !Host.IsServer )
@@ -76,11 +86,19 @@
 					Position = tr.EndPos,
 				};
 
-				ent.SetModel( "models/citizen_props/balloonregular01.vmdl" );
+				ent.SetModel( Mdl );
 				ent.PhysicsBody.GravityScale = -0.2f;
 				ent.RenderColor = Tint;
 
 				Tint = Color.Random.ToColor32();
+				Mdl = Rand.FromArray( new[]
+					{
+						"models/citizen_props/balloontall01.vmdl",
+						"models/citizen_props/balloonregular01.vmdl",
+						"models/citizen_props/balloonheart01.vmdl",
+						"models/citizen_props/balloonears01.vmdl"
+					}
+				);
 
 				if ( !useRope )
 					return;
