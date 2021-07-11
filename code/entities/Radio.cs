@@ -35,7 +35,7 @@ public partial class RadioEntity : Prop, IUse
 	{
 		if(Enable==true){
 			Enable=false;
-			RadioSnd = PlaySound( "radio.radio_music" );
+			RadioSnd = base.PlaySound( "radio.radio_music" );
 		}else{
 			Enable=true;
 			RadioSnd.Stop();
