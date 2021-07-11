@@ -3,7 +3,7 @@ using Sandbox.Joints;
 using System;
 using System.Linq;
 
-[Library( "physgun", Title = "Physicgun", Spawnable = true   )]
+[Library( "weapon_physgun", Title = "Physicgun", Spawnable = true   )]
 public partial class PhysGun : Carriable
 {
 	public override string ViewModelPath => "weapons/rust_pistol/v_rust_pistol.vmdl";
