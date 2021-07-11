@@ -32,6 +32,47 @@
 				]
 			},
 			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "plastic"
+						collision_prop = "default"
+						origin = [ -0.017634, 0.134321, 0.771944 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 11.984853, 10.003454, 1.164693 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "plastic"
+						collision_prop = "default"
+						origin = [ -0.016635, -4.647107, 10.682941 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 14.67713, 11.695933, 15.641291 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "plastic"
+						collision_prop = "default"
+						origin = [ -0.006296, 3.658614, 11.585735 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 19.755131, 4.854024, 15.514608 ]
+					},
+					{
+						_class = "PhysicsShapeSphere"
+						parent_bone = ""
+						surface_prop = "glass"
+						collision_prop = "default"
+						radius = 6.866685
+						center = [ -0.011423, 1.044191, 11.586487 ]
+					},
+				]
+			},
+			{
 				_class = "RenderMeshList"
 				children = 
 				[
