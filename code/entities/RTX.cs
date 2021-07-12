@@ -8,7 +8,7 @@ public partial class RTXEntity : Prop, IUse
 	public override void Spawn()
 	{
 		base.Spawn();
-		SetModel( "models/heavybox/rtx.vmdl" );
+		SetModel( "models/heavybox/rtx/rtx.vmdl" );
 		SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 	}
 

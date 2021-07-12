@@ -12,7 +12,7 @@ public partial class RadioEntity : Prop, IUse
 	{
 		base.Spawn();
 		CheckSnd();
-		SetModel( "models/heavybox/radio.vmdl" );
+		SetModel( "models/heavybox/radio/radio.vmdl" );
 		SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 	}
 

@@ -14,7 +14,7 @@ partial class Haxgun : Weapon
 	public override void Spawn()
 	{
 		base.Spawn();
-		SetModel( "models/heavybox/monitormodelfinal.vmdl" );
+		SetModel( "models/heavybox/monitor/monitormodelfinal.vmdl" );
 	}
 
 	public override bool CanPrimaryAttack()
@@ -40,7 +40,7 @@ partial class Haxgun : Weapon
 				Rotation = Owner.EyeRot
 			};
 
-			ent.SetModel("models/heavybox/monitormodelfinal.vmdl");
+			ent.SetModel("models/heavybox/monitor/monitormodelfinal.vmdl");
 			ent.Velocity = Owner.EyeRot.Forward * 10000;
 		}
 		// ShootBullet( 0.05f, 1.5f, 9.0f, 3.0f );
@@ -64,7 +64,7 @@ partial class Haxgun : Weapon
 				Rotation = Owner.EyeRot
 			};
 
-			ent.SetModel("models/heavybox/monitormodelfinal.vmdl");
+			ent.SetModel("models/heavybox/monitor/monitormodelfinal.vmdl");
 			ent.Velocity = Owner.EyeRot.Forward * 10000;
 		}
 		// ShootBullet( 0.05f, 1.5f, 9.0f, 3.0f );
