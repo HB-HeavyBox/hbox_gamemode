@@ -32,9 +32,9 @@
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
-						origin = [ -0.601807, -0.057235, 1.843243 ]
+						origin = [ -0.423345, -0.035101, 1.584106 ]
 						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 11.751948, 28.754795, 4.686486 ]
+						dimensions = [ 8.497343, 20.7817, 2.854471 ]
 					},
 				]
 			},
@@ -114,13 +114,6 @@
 					{
 						_class = "AnimFile"
 						name = "rtx"
-						children = 
-						[
-							{
-								_class = "AnimStartLoop"
-								start_loop_frame = 0
-							},
-						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -135,15 +128,15 @@
 						source_filename = "models/heavybox/rtx/rtx.fbx"
 						start_frame = -1
 						end_frame = -1
-						framerate = 25.0
+						framerate = 5.0
 						reverse = false
 					},
 				]
 				default_root_bone_name = ""
 			},
 		]
-		model_archetype = ""
-		primary_associated_entity = ""
+		model_archetype = "animated_model"
+		primary_associated_entity = "prop_dynamic"
 		anim_graph_name = ""
 	}
 }

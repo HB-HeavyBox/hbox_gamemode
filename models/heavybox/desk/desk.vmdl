@@ -32,9 +32,36 @@
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
-						origin = [ 0.868823, 0.977745, 19.509132 ]
+						origin = [ 0.868823, 0.977745, 41.138611 ]
 						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 42.738014, 96.571358, 38.70192 ]
+						dimensions = [ 42.738014, 96.571358, 1.656706 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.65396, -46.513355, 21.724949 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 42.308289, 1.721704, 36.881592 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ 0.65396, 48.100842, 21.666838 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 42.308289, 1.721704, 36.881592 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ -5.219427, -41.449799, 3.833974 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 30.561516, 7.739944, 0.317036 ]
 					},
 				]
 			},

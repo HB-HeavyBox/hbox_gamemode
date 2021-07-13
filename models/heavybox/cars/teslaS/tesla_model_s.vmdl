@@ -1,0 +1,116 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "bod.vmat"
+								to = "materials/models/heavybox/cars/teslas/bodyteslas.vmat"
+							},
+							{
+								from = "glass.vmat"
+								to = "models/citizen_props/wineglass02.vmat"
+							},
+							{
+								from = "int.vmat"
+								to = "materials/models/heavybox/lcd/lcd_black.vmat"
+							},
+							{
+								from = "red.vmat"
+								to = "materials/dev/primary_red.vmat"
+							},
+							{
+								from = "grill.vmat"
+								to = "materials/dev/dev_metal_rough10.vmat"
+							},
+							{
+								from = "refl.vmat"
+								to = "materials/dev/dev_metal_rough00.vmat"
+							},
+							{
+								from = "rev.vmat"
+								to = "materials/dev/primary_black.vmat"
+							},
+							{
+								from = "rims.vmat"
+								to = "models/citizen_props/wineglass02.vmat"
+							},
+							{
+								from = "glack.vmat"
+								to = "materials/dev/primary_black.vmat"
+							},
+							{
+								from = "flack.vmat"
+								to = "materials/dev/primary_black.vmat"
+							},
+							{
+								from = "emit.vmat"
+								to = "materials/dev/primary_black.vmat"
+							},
+							{
+								from = "chr.vmat"
+								to = "materials/models/heavybox/cars/teslas/chrometeslas.vmat"
+							},
+							{
+								from = ""
+								to = "models/citizen_props/wineglass02.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ -14.827404, 0.045613, 38.418522 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 247.224701, 75.120026, 71.143669 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/heavybox/cars/teslaS/Tesla Model S.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = "physics_prop_model"
+		primary_associated_entity = "prop_physics"
+		anim_graph_name = ""
+	}
+}

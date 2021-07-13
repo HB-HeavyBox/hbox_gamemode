@@ -1,0 +1,104 @@
+<!-- kv3 encoding:text:version{e21c7f3c-8a33-41c5-9977-a76d3a32aa0d} format:modeldoc29:version{3cec427c-1b0e-4d48-a90a-0436f33a6041} -->
+{
+	rootNode = 
+	{
+		_class = "RootNode"
+		children = 
+		[
+			{
+				_class = "MaterialGroupList"
+				children = 
+				[
+					{
+						_class = "DefaultMaterialGroup"
+						remaps = 
+						[
+							{
+								from = "defaultmaterial.vmat"
+								to = "materials/models/heavybox/container/open_container.vmat"
+							},
+						]
+						use_global_default = false
+						global_default_material = ""
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_prop = "default"
+						origin = [ 0.459064, 50.546848, 60.741817 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 245.401001, 6.451361, 122.483635 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_prop = "default"
+						origin = [ 0.459064, -50.657639, 60.741817 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 245.401001, 6.920373, 122.483635 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_prop = "default"
+						origin = [ -0.239857, -0.098778, 117.515656 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 246.798843, 106.836052, 8.93576 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_prop = "default"
+						origin = [ 0.000827, -0.053467, 4.992828 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 246.317474, 107.033875, 8.936146 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "metal"
+						collision_prop = "default"
+						origin = [ 120.111832, 0.593498, 62.802135 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						dimensions = [ 6.267546, 106.460709, 119.231194 ]
+					},
+				]
+			},
+			{
+				_class = "RenderMeshList"
+				children = 
+				[
+					{
+						_class = "RenderMeshFile"
+						filename = "models/heavybox/container/open_container.fbx"
+						import_translation = [ 0.0, 0.0, 0.0 ]
+						import_rotation = [ 0.0, 0.0, 0.0 ]
+						import_scale = 1.0
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						parent_bone = ""
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+				]
+			},
+		]
+		model_archetype = ""
+		primary_associated_entity = ""
+		anim_graph_name = ""
+	}
+}
