@@ -8,6 +8,9 @@ public partial class CarEntity : Prop, IUse
 	[ConVar.Replicated( "debug_car" )]
 	public static bool debug_car { get; set; } = false;
 
+	[ConVar.Replicated( "car_accelspeed" )]
+	public static float car_accelspeed { get; set; } = 700.0f;
+
 	private CarWheel frontLeft;
 	private CarWheel frontRight;
 	private CarWheel backLeft;
@@ -23,14 +26,15 @@ public partial class CarEntity : Prop, IUse
 	private float accelerateDirection;
 	private float airRoll;
 	private float airTilt;
+	private TimeSince timeSinceDriverLeft;
 
 	[Net] private float WheelSpeed { get; set; }
 	[Net] private float TurnDirection { get; set; }
 	[Net] private float AccelerationTilt { get; set; }
 	[Net] private float TurnLean { get; set; }
 
-	[Net]
-	public float MovementSpeed { get; private set; }
+	[Net] public float MovementSpeed { get; private set; }
+	[Net] public bool Grounded { get; private set; }
 
 	private struct InputState
 	{
@@ -60,7 +64,7 @@ public partial class CarEntity : Prop, IUse
 		backRight = new CarWheel( this );
 	}
 
-	private Player driver;
+	[Net] public Player driver { get; private set; }
 
 	private ModelEntity chassis_axle_rear;
 	private ModelEntity chassis_axle_front;
@@ -75,11 +79,12 @@ public partial class CarEntity : Prop, IUse
 	{
 		base.Spawn();
 
-		var modelName = "entities/modular_vehicle/chassis_2_main.vmdl";
+		var modelName = "models/car/car.vmdl";
 
 		SetModel( modelName );
 		SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
 		SetInteractsExclude( CollisionLayer.Player );
+		EnableSelfCollisions = false;
 
 		var trigger = new ModelEntity
 		{
@@ -167,17 +172,6 @@ public partial class CarEntity : Prop, IUse
 				clientModels.Add( wheel3 );
 			}
 		}
-	}
-
-	private void RemoveDriver( SandboxPlayer player )
-	{
-		driver = null;
-		player.Vehicle = null;
-		player.VehicleController = null;
-		player.VehicleCamera = null;
-		player.Tags.Remove( "driving" );
-
-		ResetInput();
 	}
 
 	protected override void OnDestroy()
@@ -287,12 +281,13 @@ public partial class CarEntity : Prop, IUse
 		{
 			var forwardSpeed = MathF.Abs( localVelocity.x );
 			var speedFactor = 1.0f - (forwardSpeed / 5000.0f).Clamp( 0.0f, 1.0f );
-			var acceleration = speedFactor * (accelerateDirection < 0.0f ? 200.0f : 700.0f) * accelerateDirection * dt;
+			var acceleration = speedFactor * (accelerateDirection < 0.0f ? 200.0f : car_accelspeed) * accelerateDirection * dt;
 			body.Velocity += rotation * new Vector3( acceleration, 0, 0 );
 		}
 
 		RaycastWheels( rotation, true, out frontWheelsOnGround, out backWheelsOnGround, dt );
 		var onGround = frontWheelsOnGround || backWheelsOnGround;
+		Grounded = onGround;
 
 		if ( frontWheelsOnGround && backWheelsOnGround )
 		{
@@ -321,7 +316,6 @@ public partial class CarEntity : Prop, IUse
 			var s = body.Position + (rotation * body.LocalMassCenter);
 			var tr = Trace.Ray( s, s + rotation.Down * 50 )
 				.Ignore( this )
-				.WithoutTags( "driving" )
 				.Run();
 
 			if ( debug_car )
@@ -335,7 +329,6 @@ public partial class CarEntity : Prop, IUse
 			var s = body.Position + (rotation * body.LocalMassCenter) + (rotation.Right * airRoll * 50) + (rotation.Down * 10);
 			var tr = Trace.Ray( s, s + rotation.Up * 25 )
 				.Ignore( this )
-				.WithoutTags( "driving" )
 				.Run();
 
 			if ( debug_car )
@@ -441,14 +434,36 @@ public partial class CarEntity : Prop, IUse
 		wheel3.LocalRotation = wheelRotBackLeft;
 	}
 
+	private void RemoveDriver( SandboxPlayer player )
+	{
+		driver = null;
+		player.Vehicle = null;
+		player.VehicleController = null;
+		player.VehicleAnimator = null;
+		player.VehicleCamera = null;
+		player.Parent = null;
+		player.PhysicsBody.Enabled = true;
+		player.PhysicsBody.Position = player.Position;
+
+		timeSinceDriverLeft = 0;
+
+		ResetInput();
+	}
+
 	public bool OnUse( Entity user )
 	{
-		if ( user is SandboxPlayer player && player.Vehicle == null )
+		if ( user is SandboxPlayer player && player.Vehicle == null && timeSinceDriverLeft > 1.0f )
 		{
 			player.Vehicle = this;
 			player.VehicleController = new CarController();
+			player.VehicleAnimator = new CarAnimator();
 			player.VehicleCamera = new CarCamera();
-			player.Tags.Add( "driving" );
+			player.Parent = this;
+			player.LocalPosition = Vector3.Up * 10;
+			player.LocalRotation = Rotation.Identity;
+			player.LocalScale = 1;
+			player.PhysicsBody.Enabled = false;
+
 			driver = player;
 		}
 
