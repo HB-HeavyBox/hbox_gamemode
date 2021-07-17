@@ -6,7 +6,7 @@ using System.Linq;
 [Library( "weapon_physgun", Title = "Physicgun", Spawnable = true   )]
 public partial class PhysGun : Carriable
 {
-	public override string ViewModelPath => "weapons/rust_pistol/v_rust_pistol.vmdl";
+	public override string ViewModelPath => "models/physgun/v_physgun.vmdl";
 
 	protected PhysicsBody holdBody;
 	protected WeldJoint holdJoint;
@@ -45,7 +45,7 @@ public partial class PhysGun : Carriable
 	{
 		base.Spawn();
 
-		SetModel( "weapons/rust_pistol/rust_pistol.vmdl" );
+		SetModel( "models/physgun/physgun.vmdl" );
 
 		CollisionGroup = CollisionGroup.Weapon;
 		SetInteractsAs( CollisionLayer.Debris );

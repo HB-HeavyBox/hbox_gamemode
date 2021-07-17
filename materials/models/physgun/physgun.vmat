@@ -12,12 +12,12 @@ Layer0
 	//---- Ambient Occlusion ----
 	g_flAmbientOcclusionDirectDiffuse "0.000"
 	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "materials/models/physgun/gap_2dae03_lagrange_kristian_ao.jpg"
+	TextureAmbientOcclusion "materials/models/physgun/physgun_ao.jpg"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/models/physgun/gap_2dae03_lagrange_kristian_c.jpg"
+	TextureColor "materials/models/physgun/physgun_C.jpg"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -30,13 +30,13 @@ Layer0
 	g_flDirectionalLightmapStrength "1.000"
 
 	//---- Metalness ----
-	TextureMetalness "materials/models/physgun/gap_2dae03_lagrange_kristian_m.jpg"
+	TextureMetalness "materials/models/physgun/physgun_m.jpg"
 
 	//---- Normal ----
-	TextureNormal "materials/models/physgun/gap_2dae03_lagrange_kristian_n.jpg"
+	TextureNormal "materials/models/physgun/physgun_n.jpg"
 
 	//---- Roughness ----
-	TextureRoughness "materials/models/physgun/gap_2dae03_lagrange_kristian_r.jpg"
+	TextureRoughness "materials/models/physgun/physgun_r.jpg"
 
 	//---- Self Illum ----
 	g_flSelfIllumAlbedoFactor "1.000"
@@ -44,7 +44,7 @@ Layer0
 	g_flSelfIllumScale "1.000"
 	g_vSelfIllumScrollSpeed "[0.000 0.000]"
 	g_vSelfIllumTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureSelfIllumMask "materials/models/physgun/gap_2dae03_lagrange_kristian_e.jpg"
+	TextureSelfIllumMask "materials/models/physgun/physgun_E.jpg.png"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
