@@ -93,19 +93,24 @@
 					rope.SetEntityBone( 1, attachEnt, tr.Bone, new Transform( attachLocalPos ) );
 				}
 
-				light.AttachRope = rope;
-
-				light.AttachJoint = PhysicsJoint.Spring
+				var spring = PhysicsJoint.Spring
 					.From( light.PhysicsBody )
 					.To( tr.Body )
 					.WithPivot( light.Position + Vector3.Down * 6.5f )
 					.WithFrequency( 5.0f )
 					.WithDampingRatio( 0.7f )
-					.WithReferenceMass( 0 )
+					.WithReferenceMass( light.PhysicsBody.Mass )
 					.WithMinRestLength( 0 )
 					.WithMaxRestLength( 100 )
 					.WithCollisionsEnabled()
 					.Create();
+
+				spring.EnableAngularConstraint = false;
+				spring.OnBreak( () =>
+				{
+					rope?.Destroy( true );
+					spring.Remove();
+				} );
 			}
 		}
 	}
