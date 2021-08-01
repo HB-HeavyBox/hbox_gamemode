@@ -20,7 +20,7 @@ partial class Flashlight : Weapon
 	{
 		base.Spawn();
 
-		SetModel( "weapons/rust_pistol/rust_pistol.vmdl" );
+		SetModel( "models/flashlight/flashlight.vmdl" );
 
 		worldLight = CreateLight();
 		worldLight.SetParent( this, "slide", new Transform( LightOffset ) );

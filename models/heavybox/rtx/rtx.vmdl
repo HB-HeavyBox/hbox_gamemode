@@ -57,8 +57,30 @@
 							exclude_by_default = false
 							exception_list = 
 							[
-								"Plane_011",
-								"Plane_007",
+								"Cube_003",
+								"Cube_002",
+								"Plane_004",
+								"Plane_005",
+								"Cube_006",
+								"Cube_012",
+								"Cube_010",
+								"Cube_013",
+								"Cube_016",
+								"Cube_015",
+								"Cylinder_001",
+								"Cube_007",
+								"BezierCurve_001",
+								"Plane_008",
+								"Cylinder_007",
+								"Plane_009",
+								"Cube_017",
+								"Cylinder_011",
+								"Cylinder_012",
+								"Cylinder_013",
+								"Cylinder_015",
+								"Cylinder_014",
+								"Cylinder_016",
+								"Cube_018",
 							]
 						}
 					},
@@ -77,31 +99,8 @@
 							exclude_by_default = false
 							exception_list = 
 							[
-								"Cube_018",
-								"Cylinder_016",
-								"Cylinder_015",
-								"Cylinder_014",
-								"Cylinder_013",
-								"Cylinder_012",
-								"Cylinder_011",
-								"Cube_017",
-								"Cylinder_007",
-								"BezierCurve_001",
-								"Cube_007",
-								"Cylinder_001",
-								"Cube_016",
-								"Cube_015",
-								"Cube_013",
-								"Cube_010",
-								"Cube_012",
-								"Cube_006",
-								"Plane_004",
-								"Cube_003",
-								"Cube_002",
-								"Plane_005",
-								"Plane_009",
-								"Plane_010",
-								"Plane_008",
+								"Plane_011",
+								"Plane_007",
 							]
 						}
 					},
@@ -113,7 +112,7 @@
 				[
 					{
 						_class = "AnimFile"
-						name = "rtx"
+						name = "idle"
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -125,14 +124,29 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
-						source_filename = "models/heavybox/rtx/rtx.fbx"
+						source_filename = "models/heavybox/rtx/rtx@idle.fbx"
 						start_frame = -1
 						end_frame = -1
-						framerate = 5.0
+						framerate = -1.0
 						reverse = false
 					},
 				]
 				default_root_bone_name = ""
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "fan1"
+						parent_bone = "Bone"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
 			},
 		]
 		model_archetype = "animated_model"
