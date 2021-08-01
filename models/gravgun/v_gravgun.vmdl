@@ -19,7 +19,7 @@
 							},
 							{
 								from = "citizen_skin.vmat"
-								to = "models/citizen/skin_old/citizen_skin.vmat"
+								to = "models/citizen/skin/citizen_skin.vmat"
 							},
 						]
 						use_global_default = false
