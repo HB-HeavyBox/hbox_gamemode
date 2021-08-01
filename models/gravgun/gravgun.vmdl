@@ -30,13 +30,13 @@
 					{
 						_class = "RenderMeshFile"
 						filename = "models/physgun/physgun.fbx"
-						import_translation = [ -20.0, -40.0, -2.0 ]
+						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
 						align_origin_x_type = "None"
 						align_origin_y_type = "None"
 						align_origin_z_type = "None"
-						parent_bone = ""
+						parent_bone = "root"
 						import_filter = 
 						{
 							exclude_by_default = false
@@ -55,15 +55,15 @@
 						surface_prop = "default"
 						collision_prop = "default"
 						radius = 4.832376
-						point0 = [ 0.532053, 6.223537, 13.287891 ]
-						point1 = [ 16.973339, 6.223537, 13.287891 ]
+						point0 = [ -4.164717, -0.201275, 17.606516 ]
+						point1 = [ 11.835283, -0.201275, 17.606516 ]
 					},
 					{
 						_class = "PhysicsShapeBox"
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
-						origin = [ 2.073752, 13.712682, 12.086119 ]
+						origin = [ -6.36413, 6.903445, 15.878828 ]
 						angles = [ 0.0, 0.0, -15.0 ]
 						dimensions = [ 1.509759, 11.057076, 1.531047 ]
 					},
@@ -72,7 +72,7 @@
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
-						origin = [ -3.199799, 7.042266, 12.405351 ]
+						origin = [ -11.434486, 0.0, 16.176043 ]
 						angles = [ -18.0, 0.0, 0.0 ]
 						dimensions = [ 11.917841, 1.67276, 2.780531 ]
 					},
@@ -81,15 +81,43 @@
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
-						origin = [ 5.496356, 6.700628, 17.661953 ]
+						origin = [ -2.781546, -0.054583, 21.711111 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						dimensions = [ 3.170955, 4.551521, 2.174941 ]
 					},
 				]
 			},
+			{
+				_class = "Skeleton"
+				children = 
+				[
+					{
+						_class = "Bone"
+						name = "hold_R"
+						origin = [ -11.945512, 0.0, 15.657942 ]
+						angles = [ 0.0, 0.0, 0.0 ]
+						do_not_discard = true
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = ""
+						relative_origin = [ 8.882429, -0.071255, 17.879341 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+				]
+			},
 		]
-		model_archetype = "static_prop_model"
-		primary_associated_entity = "prop_static"
+		model_archetype = ""
+		primary_associated_entity = ""
 		anim_graph_name = ""
 	}
 }

@@ -19,7 +19,7 @@
 							},
 							{
 								from = "citizen_skin.vmat"
-								to = "models/citizen/skin/citizen_skin.vmat"
+								to = "materials/rust_hands.vmat"
 							},
 						]
 						use_global_default = false
@@ -46,6 +46,30 @@
 							exclude_by_default = false
 							exception_list = [  ]
 						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "eye"
+						parent_bone = "neck"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
+					{
+						_class = "Attachment"
+						name = "muzzle"
+						parent_bone = ""
+						relative_origin = [ 99.424812, -32.341133, -25.811893 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
 					},
 				]
 			},
