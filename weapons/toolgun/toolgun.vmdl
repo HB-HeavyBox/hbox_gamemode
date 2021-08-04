@@ -12,7 +12,7 @@
 					{
 						_class = "Bone"
 						name = "hold_R"
-						origin = [ -0.18892, 1.359623, 0.818021 ]
+						origin = [ -2.824533, 0.24003, 0.460985 ]
 						angles = [ 0.0, 0.0, 0.0 ]
 						do_not_discard = true
 					},
@@ -27,39 +27,27 @@
 						remaps = 
 						[
 							{
-								from = "battery9v.vmat"
-								to = "materials/weapons/toolgun/9v/9v.vmat"
-							},
-							{
-								from = "pistol.vmat"
+								from = ""
 								to = "materials/weapons/toolgun/pistol/pistol.vmat"
 							},
 							{
+								from = "bat.vmat"
+								to = "materials/weapons/toolgun/9v/9v.vmat"
+							},
+							{
+								from = "rasp2.vmat"
+								to = "materials/weapons/toolgun/rasp/rasp.vmat"
+							},
+							{
+								from = "rasp.vmat"
+								to = "materials/weapons/toolgun/rasp/rasp.vmat"
+							},
+							{
 								from = "#tvs0001_screen.vmat"
-								to = "materials/models/heavybox/lcd/lcd_black.vmat"
-							},
-							{
-								from = ""
-								to = "materials/weapons/toolgun/rasp/rasp.vmat"
-							},
-							{
-								from = "material_none.vmat"
-								to = "materials/weapons/toolgun/rasp/rasp.vmat"
+								to = "materials/dev/primary_black.vmat"
 							},
 							{
 								from = "#tvs0001_plastic_black.vmat"
-								to = "materials/dev/primary_black.vmat"
-							},
-							{
-								from = "#tvs0001_metal_silver.vmat"
-								to = "materials/dev/primary_black.vmat"
-							},
-							{
-								from = "#tvs0001_metal_black.vmat"
-								to = "materials/dev/primary_black.vmat"
-							},
-							{
-								from = "#tvs0001_standby.vmat"
 								to = "materials/dev/primary_black.vmat"
 							},
 						]
@@ -76,7 +64,7 @@
 						_class = "Attachment"
 						name = "muzzle"
 						parent_bone = ""
-						relative_origin = [ 9.743745, 0.990299, 4.293953 ]
+						relative_origin = [ 8.714735, 0.040271, 4.417554 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
@@ -102,6 +90,39 @@
 							exclude_by_default = false
 							exception_list = [  ]
 						}
+					},
+				]
+			},
+			{
+				_class = "PhysicsShapeList"
+				children = 
+				[
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 1.0
+						point0 = [ -3.48827, -0.050478, 3.775794 ]
+						point1 = [ 7.683821, 0.014352, 3.739989 ]
+					},
+					{
+						_class = "PhysicsShapeCapsule"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						radius = 1.0
+						point0 = [ -3.921188, 0.062122, -3.606789 ]
+						point1 = [ -2.172634, 0.05259, 2.970296 ]
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = ""
+						surface_prop = "default"
+						collision_prop = "default"
+						origin = [ -4.705989, -0.010971, 5.019066 ]
+						angles = [ 16.406677, 0.0, 0.0 ]
+						dimensions = [ 0.167975, 3.568575, 2.143233 ]
 					},
 				]
 			},

@@ -14,24 +14,8 @@
 						remaps = 
 						[
 							{
-								from = "pistol.vmat"
-								to = "materials/weapons/toolgun/pistol/pistol.vmat"
-							},
-							{
-								from = "material_none.vmat"
-								to = "materials/weapons/toolgun/rasp/rasp.vmat"
-							},
-							{
 								from = "citizen_skin.vmat"
 								to = "models/citizen/skin/citizen_skin.vmat"
-							},
-							{
-								from = "battery9v.vmat"
-								to = "materials/weapons/toolgun/9v/9v.vmat"
-							},
-							{
-								from = "#tvs0001_standby.vmat"
-								to = "materials/dev/dev_metal_rough00.vmat"
 							},
 							{
 								from = "#tvs0001_screen.vmat"
@@ -42,15 +26,19 @@
 								to = "materials/dev/primary_black.vmat"
 							},
 							{
-								from = "#tvs0001_metal_silver.vmat"
-								to = "materials/dev/primary_black.vmat"
-							},
-							{
-								from = "#tvs0001_metal_black.vmat"
-								to = "materials/dev/primary_black.vmat"
-							},
-							{
 								from = ""
+								to = "materials/weapons/toolgun/pistol/pistol.vmat"
+							},
+							{
+								from = "bat.vmat"
+								to = "materials/weapons/toolgun/9v/9v.vmat"
+							},
+							{
+								from = "rasp2.vmat"
+								to = "materials/weapons/toolgun/rasp/rasp.vmat"
+							},
+							{
+								from = "rasp.vmat"
 								to = "materials/weapons/toolgun/rasp/rasp.vmat"
 							},
 						]
@@ -67,7 +55,7 @@
 						_class = "Attachment"
 						name = "muzzle"
 						parent_bone = ""
-						relative_origin = [ 119.101288, -32.218407, -7.510809 ]
+						relative_origin = [ 119.101288, -33.255566, -7.510809 ]
 						relative_angles = [ 0.0, 0.0, 0.0 ]
 						weight = 1.0
 						ignore_rotation = false
