@@ -12,7 +12,7 @@ public partial class PhysGun
 	[Event.Frame]
 	public void OnFrame()
 	{
-		PhysgunColor = new Color( (Time.Tick/15)%0.9f, 0f, (Time.Tick/15)*(Time.Tick/50)%0.9f );
+		PhysgunColor = new Color( 0f, (Time.Tick/5)%0.9f, 1f );
 		// Log.Info(PhysgunColor);
 		UpdateEffects();
 	}
