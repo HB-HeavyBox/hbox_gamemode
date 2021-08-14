@@ -178,11 +178,15 @@ spawnmenu {
             transition: border 0.3s ease-out;
 
             label {
+                display: none;
                 font-size: 9px;
                 position: absolute;
-                bottom: -17px;
+                bottom: -5px;
                 left: 0;
                 right: 0;
+                border-radius: 0 0 4px 4px;
+                background-color: rgba(87, 87, 87, 0.815);
+                transition: border 0.3s ease-out;
                 pointer-events: none;
             }
 
@@ -198,6 +202,12 @@ spawnmenu {
         .icon:hover {
             transition: all 0.3s ease-out;
             border: 3px solid $base-color;
+            label {
+                transition: all 0.3s ease-out;
+                bottom: 0;
+                display: flex;
+                background-color: $base-color;
+            }
         }
 
         

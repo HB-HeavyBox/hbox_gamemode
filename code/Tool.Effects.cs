@@ -9,6 +9,10 @@ public partial class Tool
 		particle.SetPosition( 0, hitPos );
 		particle.Destroy( false );
 
+		var beam = Particles.Create("particles/toolgun_beam.vpcf", hitPos);
+			beam.SetEntityAttachment(0, EffectEntity, "muzzle", true);
+			beam.SetPosition(1, hitPos);
+		
 		PlaySound( "tool.fire" ).SetRandomPitch(0.9f,1.2f);
 	}
 }

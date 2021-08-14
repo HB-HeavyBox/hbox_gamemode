@@ -44,9 +44,9 @@
 						parent_bone = ""
 						surface_prop = "default"
 						collision_prop = "default"
-						origin = [ -2.500101, 1.2207, 20.839441 ]
+						origin = [ -2.50305, 1.259955, 20.451914 ]
 						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 20.079891, 27.648767, 42.678883 ]
+						dimensions = [ 20.085789, 27.558636, 43.577465 ]
 					},
 				]
 			},
@@ -69,6 +69,21 @@
 							exclude_by_default = false
 							exception_list = [  ]
 						}
+					},
+				]
+			},
+			{
+				_class = "AttachmentList"
+				children = 
+				[
+					{
+						_class = "Attachment"
+						name = "head"
+						parent_bone = ""
+						relative_origin = [ -2.663245, 1.130628, 41.939678 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
 					},
 				]
 			},

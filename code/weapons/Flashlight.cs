@@ -6,7 +6,7 @@ partial class Flashlight : Weapon
 	public override string ViewModelPath => "weapons/rust_flashlight/v_rust_flashlight.vmdl";
 	public override float SecondaryRate => 2.0f;
 
-	protected virtual Vector3 LightOffset => Vector3.Forward;
+	protected virtual Vector3 LightOffset => Vector3.Forward * 10;
 
 	private SpotLightEntity worldLight;
 	private SpotLightEntity viewLight;
@@ -20,7 +20,7 @@ partial class Flashlight : Weapon
 	{
 		base.Spawn();
 
-		SetModel( "models/flashlight/flashlight.vmdl" );
+		SetModel( "weapons/rust_pistol/rust_pistol.vmdl" );
 
 		worldLight = CreateLight();
 		worldLight.SetParent( this, "slide", new Transform( LightOffset ) );
@@ -54,9 +54,8 @@ partial class Flashlight : Weapon
 			OuterConeAngle = 40,
 			FogStength = 1.0f,
 			Owner = Owner,
+			LightCookie = Texture.Load( "materials/effects/lightcookie.vtex" )
 		};
-
-		light.UseFog();
 
 		return light;
 	}
