@@ -5,7 +5,7 @@
 	{
 		[Net]
 		public string Mdl { get; set; }
-		public Color32 Tint { get; set; }
+		public Color Tint { get; set; }
 
 		PreviewEntity previewModel;
 
@@ -15,7 +15,7 @@
 
 			if ( Host.IsServer )
 			{
-				Tint = Color.Random.ToColor32();
+				Tint = Color.Random;
 				Mdl = Rand.FromArray( new[]
 					{
 						"models/citizen_props/balloontall01.vmdl",
@@ -51,7 +51,6 @@
 			if ( previewModel.IsValid() )
 			{
 				previewModel.RenderColor = Tint;
-				previewModel.SetModel(Mdl);
 			}
 
 			if ( !Host.IsServer )
@@ -90,7 +89,7 @@
 				ent.PhysicsBody.GravityScale = -0.2f;
 				ent.RenderColor = Tint;
 
-				Tint = Color.Random.ToColor32();
+				Tint = Color.Random;
 				Mdl = Rand.FromArray( new[]
 					{
 						"models/citizen_props/balloontall01.vmdl",
@@ -117,18 +116,18 @@
 				{
 					rope.SetEntityBone( 1, attachEnt, tr.Bone, new Transform( attachLocalPos ) );
 				}
+
 				var spring = PhysicsJoint.Spring
-			
 					.From( ent.PhysicsBody )
 					.To( tr.Body, tr.Body.Transform.PointToLocal( tr.EndPos ) )
 					.WithFrequency( 5.0f )
 					.WithDampingRatio( 0.7f )
-					.WithReferenceMass( 0 )
+					.WithReferenceMass( ent.PhysicsBody.Mass )
 					.WithMinRestLength( 0 )
 					.WithMaxRestLength( 100 )
 					.WithCollisionsEnabled()
 					.Create();
-					
+
 				spring.EnableAngularConstraint = false;
 				spring.OnBreak( () =>
 				{
